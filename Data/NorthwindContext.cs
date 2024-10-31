@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using ejercicio14.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace ejercicio14.Data;
 
-public partial class NorthwindContext : DbContext
+public partial class NorthwindContext : IdentityDbContext
 {
     public NorthwindContext(DbContextOptions<NorthwindContext> options)
         : base(options)
@@ -18,6 +19,7 @@ public partial class NorthwindContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
         modelBuilder.Entity<Supplier>().ToTable("Suppliers", table => table.ExcludeFromMigrations());
     }
