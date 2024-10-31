@@ -22,6 +22,7 @@ public partial class NorthwindContext : IdentityDbContext
         base.OnModelCreating(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
         modelBuilder.Entity<Supplier>().ToTable("Suppliers", table => table.ExcludeFromMigrations());
+        Seeder.SeedingDatabase(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
