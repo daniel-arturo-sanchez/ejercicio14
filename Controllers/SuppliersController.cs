@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ejercicio14.Data;
 using ejercicio14.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ejercicio14.Controllers
 {
+    [Authorize]
     public class SuppliersController : Controller
     {
         private readonly NorthwindContext _context;
@@ -44,6 +46,7 @@ namespace ejercicio14.Controllers
         }
 
         // GET: Suppliers/Create
+        [Authorize(Roles = "Superadmin")]
         public IActionResult Create()
         {
             return View();
@@ -53,6 +56,7 @@ namespace ejercicio14.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Superadmin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("SupplierID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,HomePage")] Supplier supplier)
         {
@@ -66,6 +70,7 @@ namespace ejercicio14.Controllers
         }
 
         // GET: Suppliers/Edit/5
+        [Authorize(Roles="admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,6 +90,7 @@ namespace ejercicio14.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("SupplierID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,HomePage")] Supplier supplier)
         {
@@ -117,6 +123,7 @@ namespace ejercicio14.Controllers
         }
 
         // GET: Suppliers/Delete/5
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,6 +142,7 @@ namespace ejercicio14.Controllers
         }
 
         // POST: Suppliers/Delete/5
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
