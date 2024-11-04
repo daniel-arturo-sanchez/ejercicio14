@@ -32,6 +32,7 @@ namespace ejercicio14.Data
             users.Add(new IdentityUser
             {
                 UserName = "admin",
+                NormalizedUserName = "ADMIN",
                 Email = "admin@correo.com",
                 NormalizedEmail = "ADMIN@CORREO.COM",
                 EmailConfirmed = true,
@@ -42,6 +43,7 @@ namespace ejercicio14.Data
             users.Add(new IdentityUser
             {
                 UserName = "user",
+                NormalizedUserName = "USER",
                 Email = "user@correo.com",
                 NormalizedEmail = "USER@CORREO.COM",
                 EmailConfirmed = true,

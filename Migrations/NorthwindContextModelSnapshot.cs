@@ -51,13 +51,13 @@ namespace ejercicio14.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ff5ddbdc-6c64-41fa-8a6d-7f198faba721",
+                            Id = "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "36f4b365-893f-4ce5-ad23-dbf0fb6be867",
+                            Id = "4db37310-2854-498a-ac5c-68139fc844ef",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -155,31 +155,33 @@ namespace ejercicio14.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "92809db0-a4bd-45e6-b077-135fa6e941e6",
+                            Id = "f4d47946-974e-4dc7-9094-ea246ae28988",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "36f2a3b6-04cc-46cd-91cf-1826644e9ed4",
+                            ConcurrencyStamp = "00d5ac00-96ce-4fe1-8a92-d620c27bfccd",
                             Email = "admin@correo.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@CORREO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEoxezY03AiviKZSi2CMaK3DRyQsDhdfFA3rvl8Vvo11v+3ve6wGITa3h1MUor+myA==",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFX48uaRSpCTE0gPXISl/csrNEE4ztJ7o2dCAocA0KrIoxG7tjFC6e7pMRTmgLpz5Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "eff63437-2d4c-45aa-a85b-c6892dd729be",
+                            SecurityStamp = "1904ff98-c734-4a0e-9327-e1e655f0dd78",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = "6557ea1f-06ea-466f-b120-17d8eab77b2c",
+                            Id = "59e735cf-46a1-4553-b462-206164809dbd",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "35777b6e-d874-4357-880f-32f46ca18783",
+                            ConcurrencyStamp = "c640059e-ce74-4075-bbf6-921f4d9578c8",
                             Email = "user@correo.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@CORREO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOUdylCHeh8ousHt0M/FXY//JIABOjUv4taZqrrW3k8pLdjbjcqujX4aTtbSj0aUbw==",
+                            NormalizedUserName = "USER",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMz42VR5N/0DY8pST5zvzOQdCr6Nxrh0k5wXJblJPN/50wwoXAGydPy/u2U6QPI3Ng==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3075d865-219b-4e36-b2a1-2a024feb6e0b",
+                            SecurityStamp = "50b653db-fda5-4f72-a260-e77305f66da9",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
@@ -251,13 +253,13 @@ namespace ejercicio14.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "92809db0-a4bd-45e6-b077-135fa6e941e6",
-                            RoleId = "ff5ddbdc-6c64-41fa-8a6d-7f198faba721"
+                            UserId = "f4d47946-974e-4dc7-9094-ea246ae28988",
+                            RoleId = "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba"
                         },
                         new
                         {
-                            UserId = "6557ea1f-06ea-466f-b120-17d8eab77b2c",
-                            RoleId = "36f4b365-893f-4ce5-ad23-dbf0fb6be867"
+                            UserId = "59e735cf-46a1-4553-b462-206164809dbd",
+                            RoleId = "4db37310-2854-498a-ac5c-68139fc844ef"
                         });
                 });
 

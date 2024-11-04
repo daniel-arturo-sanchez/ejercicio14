@@ -17,8 +17,8 @@ namespace ejercicio14.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "36f4b365-893f-4ce5-ad23-dbf0fb6be867", null, "user", "USER" },
-                    { "ff5ddbdc-6c64-41fa-8a6d-7f198faba721", null, "admin", "ADMIN" }
+                    { "4db37310-2854-498a-ac5c-68139fc844ef", null, "user", "USER" },
+                    { "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba", null, "admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -26,8 +26,8 @@ namespace ejercicio14.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "6557ea1f-06ea-466f-b120-17d8eab77b2c", 0, "35777b6e-d874-4357-880f-32f46ca18783", "user@correo.com", true, false, null, "USER@CORREO.COM", null, "AQAAAAIAAYagAAAAEOUdylCHeh8ousHt0M/FXY//JIABOjUv4taZqrrW3k8pLdjbjcqujX4aTtbSj0aUbw==", null, false, "3075d865-219b-4e36-b2a1-2a024feb6e0b", false, "user" },
-                    { "92809db0-a4bd-45e6-b077-135fa6e941e6", 0, "36f2a3b6-04cc-46cd-91cf-1826644e9ed4", "admin@correo.com", true, false, null, "ADMIN@CORREO.COM", null, "AQAAAAIAAYagAAAAEEoxezY03AiviKZSi2CMaK3DRyQsDhdfFA3rvl8Vvo11v+3ve6wGITa3h1MUor+myA==", null, false, "eff63437-2d4c-45aa-a85b-c6892dd729be", false, "admin" }
+                    { "59e735cf-46a1-4553-b462-206164809dbd", 0, "c640059e-ce74-4075-bbf6-921f4d9578c8", "user@correo.com", true, false, null, "USER@CORREO.COM", "USER", "AQAAAAIAAYagAAAAEMz42VR5N/0DY8pST5zvzOQdCr6Nxrh0k5wXJblJPN/50wwoXAGydPy/u2U6QPI3Ng==", null, false, "50b653db-fda5-4f72-a260-e77305f66da9", false, "user" },
+                    { "f4d47946-974e-4dc7-9094-ea246ae28988", 0, "00d5ac00-96ce-4fe1-8a92-d620c27bfccd", "admin@correo.com", true, false, null, "ADMIN@CORREO.COM", "ADMIN", "AQAAAAIAAYagAAAAEFX48uaRSpCTE0gPXISl/csrNEE4ztJ7o2dCAocA0KrIoxG7tjFC6e7pMRTmgLpz5Q==", null, false, "1904ff98-c734-4a0e-9327-e1e655f0dd78", false, "admin" }
                 });
 
             migrationBuilder.InsertData(
@@ -35,8 +35,8 @@ namespace ejercicio14.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "36f4b365-893f-4ce5-ad23-dbf0fb6be867", "6557ea1f-06ea-466f-b120-17d8eab77b2c" },
-                    { "ff5ddbdc-6c64-41fa-8a6d-7f198faba721", "92809db0-a4bd-45e6-b077-135fa6e941e6" }
+                    { "4db37310-2854-498a-ac5c-68139fc844ef", "59e735cf-46a1-4553-b462-206164809dbd" },
+                    { "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba", "f4d47946-974e-4dc7-9094-ea246ae28988" }
                 });
         }
 
@@ -46,32 +46,32 @@ namespace ejercicio14.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetUserRoles",
                 keyColumns: new[] { "RoleId", "UserId" },
-                keyValues: new object[] { "36f4b365-893f-4ce5-ad23-dbf0fb6be867", "6557ea1f-06ea-466f-b120-17d8eab77b2c" });
+                keyValues: new object[] { "4db37310-2854-498a-ac5c-68139fc844ef", "59e735cf-46a1-4553-b462-206164809dbd" });
 
             migrationBuilder.DeleteData(
                 table: "AspNetUserRoles",
                 keyColumns: new[] { "RoleId", "UserId" },
-                keyValues: new object[] { "ff5ddbdc-6c64-41fa-8a6d-7f198faba721", "92809db0-a4bd-45e6-b077-135fa6e941e6" });
+                keyValues: new object[] { "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba", "f4d47946-974e-4dc7-9094-ea246ae28988" });
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "36f4b365-893f-4ce5-ad23-dbf0fb6be867");
+                keyValue: "4db37310-2854-498a-ac5c-68139fc844ef");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "ff5ddbdc-6c64-41fa-8a6d-7f198faba721");
+                keyValue: "7ec6c861-01d6-44b8-a7cd-a9fc6f8af6ba");
 
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "6557ea1f-06ea-466f-b120-17d8eab77b2c");
+                keyValue: "59e735cf-46a1-4553-b462-206164809dbd");
 
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "92809db0-a4bd-45e6-b077-135fa6e941e6");
+                keyValue: "f4d47946-974e-4dc7-9094-ea246ae28988");
         }
     }
 }
